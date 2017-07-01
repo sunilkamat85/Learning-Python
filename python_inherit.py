@@ -11,8 +11,8 @@ class Student:
 #                return cls(friend_name, self.school)
 
 	@classmethod
-	def friend(cls,origin, friend_name):
-		return cls(friend_name, origin.school, 20)
+	def friend(cls,origin, friend_name, salary):
+		return cls(friend_name, origin.school, salary)
 
 class Wat(Student):
 	def __init__(self, name, school, salary):
@@ -23,7 +23,7 @@ sunil = Wat("sunil", "JNV", 20)
 sunil.marks = [76, 85, 90, 39]
 print(sunil.average())
 #print(sunil.average())
-bozo = sunil.friend(sunil, "vishal")
+bozo = sunil.friend(sunil, "vishal", 20)
 print(bozo.name)
 print(bozo.school)
 bozo.marks = [10, 5, 6]
